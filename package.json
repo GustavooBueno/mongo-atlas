@@ -1,22 +1,22 @@
 {
-  "name": "api-crud",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "engines": {
-    "node": "18.16.0"
+  "devDependencies": {
+    "@types/node": "^20.9.4",
+    "prisma": "^5.6.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.2.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.6.0",
+    "fastify": "^4.24.3",
+    "zod": "^3.22.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm i express body-parser mongoose"
+    "dev" : "tsx src/server.ts",
+    "build": "tsup src",
+    "start": "node dist/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.18.2",
-    "mongoose": "^8.0.1",
-    "nodemon": "^3.0.1"
+  "engines" : {
+    "node": "18"
   }
 }
